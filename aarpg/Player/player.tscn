@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cc0gmbwg5hj3v" path="res://Player/Sprites/AttackSprite01.png" id="3_77e26"]
 [ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="3_gq1ks"]
 [ext_resource type="Texture2D" uid="uid://bqo5qsueceo5h" path="res://Player/Sprites/Shadow.png" id="4_5l5vg"]
-[ext_resource type="Script" path="res://Player/Scripts/states/state_idle.gd" id="4_lxodo"]
+[ext_resource type="Script" path="res://Levels/scripts/state_idle.gd" id="4_lxodo"]
 [ext_resource type="Script" path="res://Player/Scripts/states/state_walk.gd" id="5_jv7tn"]
 [ext_resource type="Script" path="res://Player/Scripts/states/state_attack.gd" id="6_xjfr8"]
 [ext_resource type="AudioStream" uid="uid://ccjo2ng4nkmqp" path="res://Player/Audio/SwordSwoosh.wav" id="8_e4uib"]
