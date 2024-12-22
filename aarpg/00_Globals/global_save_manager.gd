@@ -62,11 +62,23 @@ func update_player_data() -> void:
 	current_save.player.position_y = p.global_position.y
 
 func update_scene_path() -> void:
-	var p: String = ""
+	var path: String = ""
 	for child in get_tree().root.get_children():
 		if child is Level:
-			p = child.scene_file_path
-	current_save.scene_path = p
+			path = child.scene_file_path
+	current_save.scene_path = path
 	
 func update_item_data() -> void:
 	current_save.items = PlayerManager.INVENTORY_DATA.get_save_data()
+	
+	
+func add_persistent_value(value: String) -> void:
+	if check_persistent_value(value) == false:
+		current_save.persistence.append(value)
+	pass
+	
+func check_persistent_value(value: String) -> bool:
+	var persistent_items: Array = current_save.persistence as Array
+	return persistent_items.has(value)
+	
+	
