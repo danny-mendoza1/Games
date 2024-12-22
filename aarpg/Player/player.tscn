@@ -1,18 +1,18 @@
-[gd_scene load_steps=43 format=3 uid="uid://d31x1h3wocoxu"]
+[gd_scene load_steps=44 format=3 uid="uid://d31x1h3wocoxu"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_43tmy"]
 [ext_resource type="Texture2D" uid="uid://dc7y2ddy1of4u" path="res://Player/Sprites/PlayerSprite02.png" id="2_d165c"]
 [ext_resource type="Texture2D" uid="uid://cc0gmbwg5hj3v" path="res://Player/Sprites/AttackSprite01.png" id="3_77e26"]
 [ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="3_gq1ks"]
 [ext_resource type="Texture2D" uid="uid://bqo5qsueceo5h" path="res://Player/Sprites/Shadow.png" id="4_5l5vg"]
-[ext_resource type="Script" path="res://Player/Scripts/state_idle.gd" id="4_lxodo"]
-[ext_resource type="Script" path="res://Player/Scripts/state_walk.gd" id="5_jv7tn"]
-[ext_resource type="Script" path="res://Player/Scripts/state_attack.gd" id="6_xjfr8"]
+[ext_resource type="Script" path="res://Player/Scripts/states/state_idle.gd" id="4_lxodo"]
+[ext_resource type="Script" path="res://Player/Scripts/states/state_walk.gd" id="5_jv7tn"]
+[ext_resource type="Script" path="res://Player/Scripts/states/state_attack.gd" id="6_xjfr8"]
 [ext_resource type="AudioStream" uid="uid://ccjo2ng4nkmqp" path="res://Player/Audio/SwordSwoosh.wav" id="8_e4uib"]
 [ext_resource type="PackedScene" uid="uid://bj5khyrmpqjxf" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="10_l3qs2"]
-[ext_resource type="Script" path="res://Player/Scripts/PlayerInteractionsHost.gd" id="10_rq36d"]
-[ext_resource type="Script" path="res://Player/Scripts/state_stun.gd" id="11_hxvnr"]
-[ext_resource type="Script" path="res://Player/Scripts/PlayerCamera.gd" id="11_xpdux"]
+[ext_resource type="Script" path="res://Player/Scripts/player_interactions_host.gd" id="10_rq36d"]
+[ext_resource type="Script" path="res://Player/Scripts/states/state_stun.gd" id="11_hxvnr"]
+[ext_resource type="Script" path="res://Player/Scripts/player_camera.gd" id="11_xpdux"]
 [ext_resource type="PackedScene" uid="uid://b61hvpvpti2xc" path="res://GeneralNodes/HitBox/hit_box.tscn" id="13_8k7nl"]
 [ext_resource type="AudioStream" uid="uid://b43no2vmwbdv" path="res://Player/Audio/hit_player.wav" id="14_kppbx"]
 
@@ -531,6 +531,8 @@ _data = {
 "walk_up": SubResource("Animation_4a7vs")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vvvc"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_3x0q8"]
 
 [sub_resource type="Animation" id="Animation_i34to"]
@@ -678,6 +680,16 @@ max_polyphony = 4
 [node name="Interactions" type="Node2D" parent="."]
 rotation = 0.0197533
 script = ExtResource("10_rq36d")
+
+[node name="Area2D" type="Area2D" parent="Interactions"]
+position = Vector2(0, 6)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D"]
+shape = SubResource("RectangleShape2D_3vvvc")
+debug_color = Color(0.00668559, 0.988783, 0.0628707, 0.42)
 
 [node name="HitBox" parent="." instance=ExtResource("13_8k7nl")]
 collision_layer = 2
