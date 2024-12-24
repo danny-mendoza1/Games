@@ -62,6 +62,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(0.541176, 0.211765, 0, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 18)]
+}
 
 [sub_resource type="Animation" id="Animation_egunx"]
 resource_name = "destroy_down"
@@ -555,6 +567,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [12, 13, 14, 15]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 18), Vector2(0, 18), Vector2(0, 20), Vector2(0, 20)]
+}
 
 [sub_resource type="Animation" id="Animation_7uva5"]
 resource_name = "chase_up"
@@ -573,6 +597,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [16, 17, 18, 19]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -4), Vector2(0, -4), Vector2(0, -10), Vector2(0, -4)]
+}
 
 [sub_resource type="Animation" id="Animation_tsdy8"]
 resource_name = "chase_side"
@@ -590,6 +626,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [20, 21, 22, 23]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/AttackHurtBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(4, 7), Vector2(4, 7), Vector2(14, 7), Vector2(4, 7)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d47na"]
@@ -718,12 +766,12 @@ hframes = 8
 vframes = 3
 
 [node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("2_egej3")]
-position = Vector2(0, 14)
+position = Vector2(0, 18)
 monitoring = false
 damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
-position = Vector2(0, -7)
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_vyvkh")
 debug_color = Color(0.923962, 0.934474, 0.012464, 0.42)
 
