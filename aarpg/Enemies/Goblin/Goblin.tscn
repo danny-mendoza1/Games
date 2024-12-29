@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://x51dl026en4y"]
+[gd_scene load_steps=43 format=3 uid="uid://x51dl026en4y"]
 
 [ext_resource type="Script" path="res://Enemies/Scripts/enemy.gd" id="1_b5c6s"]
 [ext_resource type="PackedScene" uid="uid://bj5khyrmpqjxf" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_egej3"]
@@ -15,7 +15,9 @@
 [ext_resource type="Script" path="res://Enemies/Scripts/drop_data.gd" id="13_rq4xk"]
 [ext_resource type="Resource" uid="uid://c4vb3fw8h3fro" path="res://Items/gem.tres" id="14_wmosp"]
 [ext_resource type="Resource" uid="uid://b4hc8ybgq3x6" path="res://Items/apple.tres" id="15_rbld5"]
+[ext_resource type="Script" path="res://Enemies/Scripts/states/enemy_state_chase.gd" id="16_1xeeq"]
 [ext_resource type="Texture2D" uid="uid://cx0dfut2iu000" path="res://Enemies/Slime/DestroySmoke.png" id="16_5i30g"]
+[ext_resource type="PackedScene" uid="uid://cs4hgxo65suws" path="res://Enemies/vision_area.tscn" id="17_uos45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vyvkh"]
 radius = 13.0
@@ -800,11 +802,17 @@ next_state = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("11_fhwn6")
-next_state = NodePath("../Idle")
+next_state = NodePath("../Chase")
 
 [node name="Destroyed" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("12_0hxgj")
 drops = Array[ExtResource("13_rq4xk")]([SubResource("Resource_7ki1c"), SubResource("Resource_cdiwy")])
+
+[node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
+script = ExtResource("16_1xeeq")
+vision_area = NodePath("../../VisionArea")
+attack_area = NodePath("../../Sprite2D/AttackHurtBox")
+next_state = NodePath("../Idle")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 max_polyphony = 4
@@ -819,3 +827,9 @@ hframes = 6
 libraries = {
 "": SubResource("AnimationLibrary_6gutq")
 }
+
+[node name="VisionArea" parent="." instance=ExtResource("17_uos45")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
+position = Vector2(0, -7)
+polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)
