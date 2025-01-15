@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjwxuu7bvfdyd"]
+[gd_scene load_steps=5 format=3 uid="uid://cjwxuu7bvfdyd"]
 
-[ext_resource type="Texture2D" uid="uid://c80aiwinj0q4o" path="res://Tile Maps/Sprites/dungeon.png" id="1_o2h4b"]
+[ext_resource type="Texture2D" uid="uid://c80aiwinj0q4o" path="res://Tile Maps/Sprites/dungeon.png" id="1_hto4q"]
+[ext_resource type="Script" path="res://Tile Maps/LevelTileMap.gd" id="2_803gh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3g66"]
-texture = ExtResource("1_o2h4b")
+texture = ExtResource("1_hto4q")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -251,5 +252,6 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_n3g66")
 
-[node name="Dungeon01" type="TileMapLayer"]
+[node name="Dungeon-01" type="TileMapLayer"]
 tile_set = SubResource("TileSet_8jrgi")
+script = ExtResource("2_803gh")
