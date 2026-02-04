@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqhduxbe5r07b"]
+[gd_scene format=3 uid="uid://dqhduxbe5r07b"]
 
 [ext_resource type="Texture2D" uid="uid://kutsdmloyx8m" path="res://Tile Maps/Sprites/obj_misk_atlas.png" id="1_g8v2n"]
 
@@ -12,5 +12,5 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/2 = SubResource("TileSetAtlasSource_vaiey")
 
-[node name="ObjMisc" type="TileMapLayer"]
+[node name="ObjMisc" type="TileMapLayer" unique_id=1680016142]
 tile_set = SubResource("TileSet_ttgoj")

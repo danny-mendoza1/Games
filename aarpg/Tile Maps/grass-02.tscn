@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgfbgokrg0emu"]
+[gd_scene format=3 uid="uid://cgfbgokrg0emu"]
 
 [ext_resource type="Texture2D" uid="uid://bngfh7nslvij1" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Grass.png" id="1_1beef"]
 
@@ -79,6 +79,6 @@ texture = ExtResource("1_1beef")
 [sub_resource type="TileSet" id="TileSet_q3hol"]
 sources/1 = SubResource("TileSetAtlasSource_b8lu7")
 
-[node name="Grass-02" type="TileMapLayer"]
+[node name="Grass-02" type="TileMapLayer" unique_id=19682342]
 z_index = -1
 tile_set = SubResource("TileSet_q3hol")

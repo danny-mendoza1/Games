@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://co2nbbyoefwxb"]
+[gd_scene format=3 uid="uid://co2nbbyoefwxb"]
 
 [ext_resource type="Texture2D" uid="uid://d3hnfc3s18ag7" path="res://Tile Maps/Sprites/base_out_atlas.png" id="1_mo1e1"]
 
@@ -3249,5 +3249,5 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_b3qye")
 
-[node name="BaseOut" type="TileMapLayer"]
+[node name="BaseOut" type="TileMapLayer" unique_id=1176710417]
 tile_set = SubResource("TileSet_0npr1")

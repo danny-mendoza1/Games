@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dofyiypjwytbp"]
+[gd_scene format=3 uid="uid://dofyiypjwytbp"]
 
 [ext_resource type="Texture2D" uid="uid://b0xa5ivsbc470" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Hills.png" id="1_3n2f6"]
 
@@ -57,6 +57,6 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_e2eny")
 
-[node name="Hills" type="TileMapLayer"]
+[node name="Hills" type="TileMapLayer" unique_id=904670606]
 z_index = -1
 tile_set = SubResource("TileSet_b72ky")

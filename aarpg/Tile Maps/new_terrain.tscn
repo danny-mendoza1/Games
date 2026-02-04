@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmw4ybwxcqek2"]
+[gd_scene format=3 uid="uid://bmw4ybwxcqek2"]
 
 [ext_resource type="Texture2D" uid="uid://bsw83kndwuckc" path="res://Tile Maps/Sprites/terrain_atlas.png" id="1_xm0w2"]
 
@@ -3973,6 +3973,6 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_okn4v")
 
-[node name="NewTerrain" type="TileMapLayer"]
+[node name="NewTerrain" type="TileMapLayer" unique_id=1664167927]
 position = Vector2(1024, 1024)
 tile_set = SubResource("TileSet_3pj4x")

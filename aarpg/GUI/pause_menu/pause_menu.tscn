@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://kbhfaj1nikce"]
+[gd_scene format=3 uid="uid://kbhfaj1nikce"]
 
-[ext_resource type="Script" path="res://GUI/pause_menu/pause_menu.gd" id="1_pjqfr"]
+[ext_resource type="Script" uid="uid://c2vjjbypklc3l" path="res://GUI/pause_menu/pause_menu.gd" id="1_pjqfr"]
 [ext_resource type="Texture2D" uid="uid://jpu2hctfrext" path="res://Items/sprites/items.png" id="2_t74il"]
 [ext_resource type="PackedScene" uid="uid://dgh0so7srmwnr" path="res://GUI/pause_menu/inventory/inventory_slot.tscn" id="3_dsrgr"]
-[ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_ui.gd" id="3_mf0to"]
+[ext_resource type="Script" uid="uid://wga3w6drpua0" path="res://GUI/pause_menu/inventory/scripts/inventory_ui.gd" id="3_mf0to"]
 [ext_resource type="Resource" uid="uid://bxnvrqsw6gv5k" path="res://GUI/pause_menu/inventory/player_inventory.tres" id="4_6nlpo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6462f"]
@@ -21,11 +21,11 @@ texture_margin_top = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1416591983]
 process_mode = 3
 script = ExtResource("1_pjqfr")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1110332083]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=907301557]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.180392, 0.180392, 0.180392, 0.831373)
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="Control" unique_id=328799149]
 modulate = Color(1, 1, 1, 0.643137)
 layout_mode = 1
 anchors_preset = 8
@@ -58,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "[ paused ]"
 
-[node name="ItemDescription" type="Label" parent="Control"]
+[node name="ItemDescription" type="Label" parent="Control" unique_id=2015398303]
 modulate = Color(1, 1, 1, 0.643137)
 layout_mode = 1
 anchors_preset = 8
@@ -76,7 +76,7 @@ theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=271015368]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 70.0
@@ -86,7 +86,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_1rcfq")
 
-[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer" unique_id=960219073]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 localize_numeral_system = false
@@ -94,27 +94,27 @@ columns = 5
 script = ExtResource("3_mf0to")
 data = ExtResource("4_6nlpo")
 
-[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" unique_id=995819389 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" unique_id=1525624435 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 
-[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" unique_id=692764390 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 
-[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" unique_id=785316531 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" unique_id=2062779698 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_dsrgr")]
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" unique_id=332589196 instance=ExtResource("3_dsrgr")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=208764299]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,15 +129,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 
-[node name="Button_Save" type="Button" parent="Control/HBoxContainer"]
+[node name="Button_Save" type="Button" parent="Control/HBoxContainer" unique_id=1585300367]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 text = "Save"
 
-[node name="Button_Load" type="Button" parent="Control/HBoxContainer"]
+[node name="Button_Load" type="Button" parent="Control/HBoxContainer" unique_id=1622155936]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 text = "Load"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control" unique_id=1505363120]
 max_polyphony = 4

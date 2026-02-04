@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj57pxatw1o3f"]
+[gd_scene format=3 uid="uid://dj57pxatw1o3f"]
 
-[ext_resource type="Script" path="res://GUI/player_hud/player_hud.gd" id="1_7ymbl"]
+[ext_resource type="Script" uid="uid://cfrvqwt7b68jl" path="res://GUI/player_hud/player_hud.gd" id="1_7ymbl"]
 [ext_resource type="Texture2D" uid="uid://ce8go10vy6qls" path="res://GUI/player_hud/gui-health.png" id="1_13tlg"]
 [ext_resource type="PackedScene" uid="uid://cxyc3ijawrtm1" path="res://GUI/player_hud/heart_gui.tscn" id="2_6ouwt"]
 
-[node name="PlayerHud" type="CanvasLayer"]
+[node name="PlayerHud" type="CanvasLayer" unique_id=975863940]
 layer = 2
 script = ExtResource("1_7ymbl")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=356505205]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=259742990]
 texture_filter = 1
 position = Vector2(379, 10)
 scale = Vector2(1.08824, 1)
@@ -25,7 +25,7 @@ texture = ExtResource("1_13tlg")
 region_enabled = true
 region_rect = Rect2(29, 0, 34, 9)
 
-[node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+[node name="HFlowContainer" type="HFlowContainer" parent="Control" unique_id=1449526465]
 layout_mode = 0
 offset_left = 316.0
 offset_top = 21.0
@@ -35,62 +35,62 @@ theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 2
 alignment = 1
 
-[node name="Heart" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart" parent="Control/HFlowContainer" unique_id=1934707506 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart2" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart2" parent="Control/HFlowContainer" unique_id=771764105 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart3" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart3" parent="Control/HFlowContainer" unique_id=773424844 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart4" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart4" parent="Control/HFlowContainer" unique_id=590758435 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart5" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart5" parent="Control/HFlowContainer" unique_id=1748456540 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart6" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart6" parent="Control/HFlowContainer" unique_id=548717500 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart7" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart7" parent="Control/HFlowContainer" unique_id=2085872129 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart8" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart8" parent="Control/HFlowContainer" unique_id=1590589966 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart9" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart9" parent="Control/HFlowContainer" unique_id=806520924 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart10" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart10" parent="Control/HFlowContainer" unique_id=305371462 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart11" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart11" parent="Control/HFlowContainer" unique_id=1145488419 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart12" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart12" parent="Control/HFlowContainer" unique_id=1961146013 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart13" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart13" parent="Control/HFlowContainer" unique_id=1622587995 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart14" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart14" parent="Control/HFlowContainer" unique_id=245896308 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart15" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart15" parent="Control/HFlowContainer" unique_id=1992562559 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart16" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart16" parent="Control/HFlowContainer" unique_id=426024097 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart17" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart17" parent="Control/HFlowContainer" unique_id=1449061237 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart18" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart18" parent="Control/HFlowContainer" unique_id=14178511 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart19" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart19" parent="Control/HFlowContainer" unique_id=1730409038 instance=ExtResource("2_6ouwt")]
 layout_mode = 2
 
-[node name="Heart20" parent="Control/HFlowContainer" instance=ExtResource("2_6ouwt")]
+[node name="Heart20" parent="Control/HFlowContainer" unique_id=246662219 instance=ExtResource("2_6ouwt")]
 layout_mode = 2

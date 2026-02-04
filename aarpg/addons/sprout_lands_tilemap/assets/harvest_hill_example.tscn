@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cyguxpvjhsj7b"]
+[gd_scene format=4 uid="uid://cyguxpvjhsj7b"]
 
 [ext_resource type="PackedScene" uid="uid://csv8m50kp3gk4" path="res://addons/sprout_lands_tilemap/base/scenes/sprout_lands_tile_map.tscn" id="1_nv8wl"]
 [ext_resource type="Texture2D" uid="uid://bngfh7nslvij1" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Grass.png" id="2_5h4lh"]
@@ -1300,7 +1300,7 @@ sources/7 = SubResource("TileSetAtlasSource_ec0i7")
 sources/8 = SubResource("TileSetAtlasSource_jobb0")
 sources/6 = SubResource("TileSetAtlasSource_c72dr")
 
-[node name="SproutLandsTileMap" instance=ExtResource("1_nv8wl")]
+[node name="SproutLandsTileMap" unique_id=1498154595 instance=ExtResource("1_nv8wl")]
 
 [node name="Water" parent="." index="0"]
 texture_filter = 1

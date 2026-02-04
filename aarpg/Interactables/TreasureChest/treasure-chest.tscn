@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://ctsn3qdkaaddv"]
+[gd_scene format=3 uid="uid://ctsn3qdkaaddv"]
 
-[ext_resource type="Script" path="res://Interactables/TreasureChest/treasure_chest.gd" id="1_nvixe"]
+[ext_resource type="Script" uid="uid://c1og5k2ii0vlv" path="res://Interactables/TreasureChest/treasure_chest.gd" id="1_nvixe"]
 [ext_resource type="Texture2D" uid="uid://bkwu3faoul11d" path="res://Interactables/TreasureChest/treasure-chest.png" id="2_q7r50"]
 [ext_resource type="Texture2D" uid="uid://jpu2hctfrext" path="res://Items/sprites/items.png" id="3_61nrd"]
 [ext_resource type="AudioStream" uid="uid://c41didij8daj0" path="res://Interactables/TreasureChest/treasure-open.wav" id="4_k8mfd"]
@@ -187,10 +187,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7gc16"]
 _data = {
-"RESET": SubResource("Animation_7w64y"),
-"closed": SubResource("Animation_ywt6u"),
-"open_chest": SubResource("Animation_v3336"),
-"opened": SubResource("Animation_0l2k3")
+&"RESET": SubResource("Animation_7w64y"),
+&"closed": SubResource("Animation_ywt6u"),
+&"open_chest": SubResource("Animation_v3336"),
+&"opened": SubResource("Animation_0l2k3")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3lfep"]
@@ -199,20 +199,20 @@ size = Vector2(32, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlocp"]
 size = Vector2(36, 17)
 
-[node name="Treasure-chest" type="Node2D"]
+[node name="Treasure-chest" type="Node2D" unique_id=1879564287]
 process_mode = 3
 script = ExtResource("1_nvixe")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2029187185]
 position = Vector2(0, -10)
 texture = ExtResource("2_q7r50")
 hframes = 2
 
-[node name="ItemSprite" type="Sprite2D" parent="."]
+[node name="ItemSprite" type="Sprite2D" parent="." unique_id=394021063]
 position = Vector2(0, -10)
 texture = SubResource("AtlasTexture_7hloy")
 
-[node name="Label" type="Label" parent="ItemSprite"]
+[node name="Label" type="Label" parent="ItemSprite" unique_id=1945595185]
 offset_left = 12.0
 offset_top = -13.0
 offset_right = 52.0
@@ -222,30 +222,28 @@ theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 10
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_7gc16")
-}
-autoplay = "closed"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1407724457]
+libraries/ = SubResource("AnimationLibrary_7gc16")
+autoplay = &"closed"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1934319607]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1671755755]
 collision_layer = 16
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=651133335]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_3lfep")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1281835081]
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1235431455]
 position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_wlocp")
 debug_color = Color(0, 0.7, 0.186329, 0.42)
 
-[node name="IsOpen" parent="." instance=ExtResource("5_g0b1t")]
+[node name="IsOpen" parent="." unique_id=1069366679 instance=ExtResource("5_g0b1t")]

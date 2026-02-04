@@ -1,18 +1,18 @@
-[gd_scene load_steps=44 format=3 uid="uid://bpix45skapuo"]
+[gd_scene format=3 uid="uid://bpix45skapuo"]
 
-[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_bkrhg"]
+[ext_resource type="Script" uid="uid://dhhobrfofod5c" path="res://Player/Scripts/player.gd" id="1_bkrhg"]
 [ext_resource type="Texture2D" uid="uid://qyx5iwsxuf3c" path="res://Player/Sprites/Mobile - Octopath Traveler Champions of the Continent - Cyrus.png" id="2_k6jag"]
 [ext_resource type="Texture2D" uid="uid://cc0gmbwg5hj3v" path="res://Player/Sprites/AttackSprite01.png" id="3_of1ij"]
 [ext_resource type="Texture2D" uid="uid://bqo5qsueceo5h" path="res://Player/Sprites/Shadow.png" id="4_uwqly"]
 [ext_resource type="PackedScene" uid="uid://bj5khyrmpqjxf" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="5_cecyh"]
-[ext_resource type="Script" path="res://Player/Scripts/player_state_machine.gd" id="6_ea5p6"]
-[ext_resource type="Script" path="res://Levels/scripts/state_idle.gd" id="7_j6106"]
-[ext_resource type="Script" path="res://Player/Scripts/states/state_walk.gd" id="8_5aocu"]
-[ext_resource type="Script" path="res://Player/Scripts/states/state_attack.gd" id="9_u81km"]
+[ext_resource type="Script" uid="uid://o1j3uis71txo" path="res://Player/Scripts/player_state_machine.gd" id="6_ea5p6"]
+[ext_resource type="Script" uid="uid://dukwnfn5ir5i4" path="res://Levels/scripts/state_idle.gd" id="7_j6106"]
+[ext_resource type="Script" uid="uid://bnq156ixug4jw" path="res://Player/Scripts/states/state_walk.gd" id="8_5aocu"]
+[ext_resource type="Script" uid="uid://cj11g78l86b5e" path="res://Player/Scripts/states/state_attack.gd" id="9_u81km"]
 [ext_resource type="AudioStream" uid="uid://ccjo2ng4nkmqp" path="res://Player/Audio/SwordSwoosh.wav" id="10_r16qr"]
-[ext_resource type="Script" path="res://Player/Scripts/states/state_stun.gd" id="11_t31bo"]
-[ext_resource type="Script" path="res://Player/Scripts/player_camera.gd" id="12_onk6t"]
-[ext_resource type="Script" path="res://Player/Scripts/player_interactions_host.gd" id="13_pds24"]
+[ext_resource type="Script" uid="uid://cwpp0wl1mlojm" path="res://Player/Scripts/states/state_stun.gd" id="11_t31bo"]
+[ext_resource type="Script" uid="uid://y3swgxxttrlm" path="res://Player/Scripts/player_camera.gd" id="12_onk6t"]
+[ext_resource type="Script" uid="uid://c4csas8c1sfum" path="res://Player/Scripts/player_interactions_host.gd" id="13_pds24"]
 [ext_resource type="PackedScene" uid="uid://b61hvpvpti2xc" path="res://GeneralNodes/HitBox/hit_box.tscn" id="14_g6an1"]
 [ext_resource type="AudioStream" uid="uid://b43no2vmwbdv" path="res://Player/Audio/hit_player.wav" id="15_p0rca"]
 
@@ -243,11 +243,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i2pjs"]
 _data = {
-"RESET": SubResource("Animation_27ise"),
-"attack_down": SubResource("Animation_xvrsi"),
-"attack_side": SubResource("Animation_fwjp1"),
-"attack_up": SubResource("Animation_mn3j3"),
-"no_attack": SubResource("Animation_257o4")
+&"RESET": SubResource("Animation_27ise"),
+&"attack_down": SubResource("Animation_xvrsi"),
+&"attack_side": SubResource("Animation_fwjp1"),
+&"attack_up": SubResource("Animation_mn3j3"),
+&"no_attack": SubResource("Animation_257o4")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_csjk4"]
@@ -516,19 +516,19 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5rlp"]
 _data = {
-"RESET": SubResource("Animation_80t1n"),
-"attack_down": SubResource("Animation_0pw1x"),
-"attack_side": SubResource("Animation_lr5mm"),
-"attack_up": SubResource("Animation_t3xyu"),
-"idle_down": SubResource("Animation_dl0bt"),
-"idle_side": SubResource("Animation_m0k08"),
-"idle_up": SubResource("Animation_fxctr"),
-"stun_down": SubResource("Animation_l0ikd"),
-"stun_side": SubResource("Animation_7aqiq"),
-"stun_up": SubResource("Animation_kxx4y"),
-"walk_down": SubResource("Animation_pgusn"),
-"walk_side": SubResource("Animation_ugk5i"),
-"walk_up": SubResource("Animation_4a7vs")
+&"RESET": SubResource("Animation_80t1n"),
+&"attack_down": SubResource("Animation_0pw1x"),
+&"attack_side": SubResource("Animation_lr5mm"),
+&"attack_up": SubResource("Animation_t3xyu"),
+&"idle_down": SubResource("Animation_dl0bt"),
+&"idle_side": SubResource("Animation_m0k08"),
+&"idle_up": SubResource("Animation_fxctr"),
+&"stun_down": SubResource("Animation_l0ikd"),
+&"stun_side": SubResource("Animation_7aqiq"),
+&"stun_up": SubResource("Animation_kxx4y"),
+&"walk_down": SubResource("Animation_pgusn"),
+&"walk_side": SubResource("Animation_ugk5i"),
+&"walk_up": SubResource("Animation_4a7vs")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vvvc"]
@@ -597,109 +597,103 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tcrgp"]
 _data = {
-"RESET": SubResource("Animation_i34to"),
-"damaged": SubResource("Animation_wjpan"),
-"default": SubResource("Animation_y5xhd")
+&"RESET": SubResource("Animation_i34to"),
+&"damaged": SubResource("Animation_wjpan"),
+&"default": SubResource("Animation_y5xhd")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=166628868]
 collision_mask = 16
 motion_mode = 1
 wall_min_slide_angle = 0.174533
 script = ExtResource("1_bkrhg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1517917271]
 shape = SubResource("CircleShape2D_cbr7x")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051216976]
 texture_filter = 1
 position = Vector2(-4, -15)
 texture = ExtResource("2_k6jag")
 hframes = 12
 vframes = 12
 
-[node name="AttackEffectSprite" type="Sprite2D" parent="Sprite2D"]
+[node name="AttackEffectSprite" type="Sprite2D" parent="Sprite2D" unique_id=250547142]
 texture_filter = 1
 position = Vector2(2, 9)
 texture = ExtResource("3_of1ij")
 hframes = 12
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/AttackEffectSprite"]
-libraries = {
-"": SubResource("AnimationLibrary_i2pjs")
-}
-autoplay = "no_attack"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/AttackEffectSprite" unique_id=2110806738]
+libraries/ = SubResource("AnimationLibrary_i2pjs")
+autoplay = &"no_attack"
 
-[node name="ShadowSprite" type="Sprite2D" parent="Sprite2D"]
+[node name="ShadowSprite" type="Sprite2D" parent="Sprite2D" unique_id=2099887468]
 modulate = Color(0, 0, 0, 0.784314)
 show_behind_parent = true
 texture_filter = 1
 position = Vector2(0, 21)
 texture = ExtResource("4_uwqly")
 
-[node name="AttackHurtBox" parent="Sprite2D" instance=ExtResource("5_cecyh")]
+[node name="AttackHurtBox" parent="Sprite2D" unique_id=981001188 instance=ExtResource("5_cecyh")]
 position = Vector2(0, 18)
 collision_mask = 256
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AttackHurtBox" unique_id=2113167877]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_csjk4")
 debug_color = Color(0.866914, 0.335645, 0.306582, 0.42)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_a5rlp")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1614936075]
+libraries/ = SubResource("AnimationLibrary_a5rlp")
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." unique_id=1309557213]
 script = ExtResource("6_ea5p6")
 
-[node name="Idle" type="Node" parent="StateMachine"]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=2055091052]
 script = ExtResource("7_j6106")
 
-[node name="Walk" type="Node" parent="StateMachine"]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=31447774]
 script = ExtResource("8_5aocu")
 
-[node name="Attack" type="Node" parent="StateMachine"]
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1115759043]
 script = ExtResource("9_u81km")
 attack_sound = ExtResource("10_r16qr")
 
-[node name="Stun" type="Node" parent="StateMachine"]
+[node name="Stun" type="Node" parent="StateMachine" unique_id=585810505]
 script = ExtResource("11_t31bo")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=107906668]
 editor_draw_limits = true
 script = ExtResource("12_onk6t")
 
-[node name="Audio" type="Node2D" parent="."]
+[node name="Audio" type="Node2D" parent="." unique_id=564431588]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio" unique_id=2091437296]
 max_polyphony = 4
 
-[node name="Interactions" type="Node2D" parent="."]
+[node name="Interactions" type="Node2D" parent="." unique_id=386806336]
 rotation = 0.0197533
 script = ExtResource("13_pds24")
 
-[node name="Area2D" type="Area2D" parent="Interactions"]
+[node name="Area2D" type="Area2D" parent="Interactions" unique_id=154388589]
 position = Vector2(0, 6)
 collision_layer = 4
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D" unique_id=1467687019]
 shape = SubResource("RectangleShape2D_3vvvc")
 debug_color = Color(0.00668559, 0.988783, 0.0628707, 0.42)
 
-[node name="HitBox" parent="." instance=ExtResource("14_g6an1")]
+[node name="HitBox" parent="." unique_id=1045851506 instance=ExtResource("14_g6an1")]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1748500278]
 position = Vector2(0, -9)
 shape = SubResource("CircleShape2D_3x0q8")
 debug_color = Color(0.7, 0.626448, 0, 0.42)
 
-[node name="EffectAnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_tcrgp")
-}
+[node name="EffectAnimationPlayer" type="AnimationPlayer" parent="." unique_id=1108281640]
+libraries/ = SubResource("AnimationLibrary_tcrgp")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://csv8m50kp3gk4"]
+[gd_scene format=3 uid="uid://csv8m50kp3gk4"]
 
 [ext_resource type="Texture2D" uid="uid://bngfh7nslvij1" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Grass.png" id="1_m6ilp"]
 [ext_resource type="Texture2D" uid="uid://d1c7tdeg77os" path="res://addons/sprout_lands_tilemap/assets/Tilesets/Tilled Dirt.png" id="2_7j6vt"]
@@ -1299,38 +1299,38 @@ sources/7 = SubResource("TileSetAtlasSource_ec0i7")
 sources/8 = SubResource("TileSetAtlasSource_jobb0")
 sources/6 = SubResource("TileSetAtlasSource_c72dr")
 
-[node name="SproutLandsTileMap" type="Node2D"]
+[node name="SproutLandsTileMap" type="Node2D" unique_id=1237733550]
 texture_filter = 1
 
-[node name="Water" type="TileMapLayer" parent="."]
+[node name="Water" type="TileMapLayer" parent="." unique_id=1828759125]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Dirt" type="TileMapLayer" parent="."]
+[node name="Dirt" type="TileMapLayer" parent="." unique_id=723227293]
 use_parent_material = true
 tile_map_data = PackedByteArray(0, 0, 135, 0, 87, 0, 1, 0, 0, 0, 6, 0, 0, 0)
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Grass" type="TileMapLayer" parent="."]
+[node name="Grass" type="TileMapLayer" parent="." unique_id=1080948425]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Path" type="TileMapLayer" parent="."]
+[node name="Path" type="TileMapLayer" parent="." unique_id=249408328]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Fence" type="TileMapLayer" parent="."]
+[node name="Fence" type="TileMapLayer" parent="." unique_id=1246393201]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Crops" type="TileMapLayer" parent="."]
+[node name="Crops" type="TileMapLayer" parent="." unique_id=1936712863]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Walls" type="TileMapLayer" parent="."]
+[node name="Walls" type="TileMapLayer" parent="." unique_id=602225408]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")
 
-[node name="Roof" type="TileMapLayer" parent="."]
+[node name="Roof" type="TileMapLayer" parent="." unique_id=512037615]
 use_parent_material = true
 tile_set = SubResource("TileSet_ckcx6")

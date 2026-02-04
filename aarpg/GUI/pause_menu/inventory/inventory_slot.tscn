@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgh0so7srmwnr"]
+[gd_scene format=3 uid="uid://dgh0so7srmwnr"]
 
-[ext_resource type="Script" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="1_25rjg"]
+[ext_resource type="Script" uid="uid://543g3hnqdtgo" path="res://GUI/pause_menu/inventory/scripts/inventory_slot_ui.gd" id="1_25rjg"]
 [ext_resource type="Texture2D" uid="uid://jpu2hctfrext" path="res://Items/sprites/items.png" id="1_e6p7j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydpba"]
 atlas = ExtResource("1_e6p7j")
 region = Rect2(0, 0, 32, 32)
 
-[node name="InventorySlot" type="Button"]
+[node name="InventorySlot" type="Button" unique_id=693951380]
 offset_right = 32.0
 offset_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_25rjg")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=12804670]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_right = 32.0
@@ -22,7 +22,7 @@ offset_bottom = 32.0
 texture = SubResource("AtlasTexture_ydpba")
 stretch_mode = 3
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=898753875]
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 23.0

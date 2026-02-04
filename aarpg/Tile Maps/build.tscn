@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://1nu40tgjddog"]
+[gd_scene format=3 uid="uid://1nu40tgjddog"]
 
 [ext_resource type="Texture2D" uid="uid://kpmd8mmkoa85" path="res://Tile Maps/Sprites/build_atlas.png" id="1_xteu6"]
 
@@ -3279,5 +3279,5 @@ physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_5v1yw")
 
-[node name="Build" type="TileMapLayer"]
+[node name="Build" type="TileMapLayer" unique_id=157013897]
 tile_set = SubResource("TileSet_v1kba")

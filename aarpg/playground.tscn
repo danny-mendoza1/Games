@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://xb6rxvp0mqn7"]
+[gd_scene format=3 uid="uid://xb6rxvp0mqn7"]
 
-[ext_resource type="Script" path="res://Levels/scripts/level.gd" id="1_ab0dc"]
+[ext_resource type="Script" uid="uid://d1b4esfueykqa" path="res://Levels/scripts/level.gd" id="1_ab0dc"]
 [ext_resource type="PackedScene" uid="uid://b5wx3kyu78g4n" path="res://Levels/player_spawn.tscn" id="4_j4ag5"]
 [ext_resource type="PackedScene" uid="uid://bmw4ybwxcqek2" path="res://Tile Maps/new_terrain.tscn" id="5_x4g0e"]
 
-[node name="Playground" type="Node2D"]
+[node name="Playground" type="Node2D" unique_id=273935327]
 y_sort_enabled = true
 position = Vector2(0, 25)
 script = ExtResource("1_ab0dc")
 
-[node name="PlayerSpawn" parent="." instance=ExtResource("4_j4ag5")]
+[node name="PlayerSpawn" parent="." unique_id=69679968 instance=ExtResource("4_j4ag5")]
 position = Vector2(188, 96)
 
-[node name="NewTerrain" parent="." instance=ExtResource("5_x4g0e")]
+[node name="NewTerrain" parent="." unique_id=154835395 instance=ExtResource("5_x4g0e")]
